@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  get 'pages/index'
-  get 'groups/index'
-  get 'groups/show'
-  get 'groups/new'
-  get 'expenses/index'
-  get 'expenses/show'
-  get 'expenses/new'
-  get 'expenses/edit'
-  devise_for :users
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :users 
+  devise_scope  :user do
+    get 'users/sign_out' => 'devise/sessions#destroy'
+  end
 
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :users do 
+    resources :groups do
+      resources :expenses
+    end
+  end
   # Defines the root path route ("/")
-  root "users#index"
+  root "pages#splash"
+
 end
