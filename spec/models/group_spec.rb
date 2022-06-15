@@ -20,7 +20,7 @@ RSpec.describe Group, type: :model do
     end
 
     it 'With nme length more than 100 should not be valid' do
-      group.name = 'qwertyuiopasdfghjklzxcvbnm,qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm,qwertyuiopasdfghjklzxcvbnm,,qwertyuiopasdfghjklzxcvbnm,'
+      group.name = 'qwertyuiopasdfghjklzxcvbnm,qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghj,qwertyuiopasdfghjklzxcvbnm,,qwertyuiopasdfghjklzxcvbnm,'
       expect(group).to_not be_valid
     end
 
