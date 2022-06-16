@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     end
   end
   # Defines the root path route ("/")
-  root "pages#splash"
+  root "pages#index"
 
 end
