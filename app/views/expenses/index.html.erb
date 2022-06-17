@@ -1,0 +1,87 @@
+<div class="bg-fond_gris h-screen">
+<div class="grid grid-cols-3 bg-fond_blue h-14 items-center">
+ <div class="pl-4">
+      <%= link_to  user_groups_path do %>
+        <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>
+      <% end  %>
+    </div>
+  <div class="pl-4"><h3 class="text-stone-300 font-bold text-2xl" >Expenses</h3> </div>
+  <div> </div>
+</div>
+
+
+
+<div class="flex md:max-w-xl bg-white shadow-lg justify-between items-center p-2">
+  <div class="w-1/10"> 
+    <%= image_tag "#{@group_id.icon}.png", style: 'height:40px; width:auto;' %> 
+  </div>
+     
+     <% if @expenses.count > 0 %>
+  
+
+ 
+      <div class="grid grid-cols-1 justify-items-start w-3/5 text-text_gray_1">
+          <p class="font-bold text-lg"> Category: <%= @group_id.name %> </p>
+          <p class="font-bold text-lg">Total spent: </p>
+      </div>
+
+
+
+<div class="">
+
+<p class="text-text_gray font-bold text-xl">$<%= @expenses.first.total_expenses(@group_id) %></p>
+
+</div>
+
+
+
+  <%end %>
+</div>
+
+
+
+
+
+
+  <div class="p-2">
+
+    <% @expenses.each do |expense| %>
+      
+<div class="flex md:max-w-xl bg-white shadow-lg mb-1">
+      <div class="w-1/6"> 
+          <%= image_tag "#{@group_id.icon}.png", style: 'height:40px; width:auto;' %> 
+      </div>
+ 
+      <%= render expense %>
+
+   
+  </div> 
+   
+   
+   
+   
+    <% end %>
+
+  </div>
+
+
+
+
+
+
+  <div class="w-full absolute bottom-0 left-0 bg-fond_vert h-12 p-3 mb-1 flex items-center text-center">
+    <%= link_to "Add a new expense", new_user_group_expense_path(user_id: current_user.id, group_id: @group_id), :class => "inline-block w-full border border-10 text-xl border-white px-6 py-2.5 bg-fond_vert text-stone-300 font-medium text-xs leading-tight uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %>
+  </div> 
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
