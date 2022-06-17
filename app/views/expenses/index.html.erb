@@ -1,2 +1,35 @@
-<h1>Expenses#index</h1>
-<p>Find me in app/views/expenses/index.html.erb</p>
+<div>
+ <div>
+      <%= link_to  user_groups_path do %>
+        <%= image_tag "back.svg", style: 'height:10px; width:auto;' %>
+      <% end  %>
+    </div>
+  <h3>expenses</h3> 
+  <div> </div>
+</div>
+
+<div>
+  <div> 
+    <%= image_tag "#{@group_id.icon}.png", style: 'height:40px; width:auto;' %> 
+  </div>
+<% if @expenses.count > 0 %>
+  <div>
+    <p> <strong>Category:</strong> <%= @group_id.name %> </p>
+    <p> <strong>Total spent:</strong> $<%= @expenses.first.total_expenses(@group_id) %></p>
+  </div>
+  <%end %>
+</div>
+
+<div>
+  <% @expenses.each do |expense| %>
+    <%= render expense %>
+    <p>
+     
+    </p>
+  <% end %>
+</div>
+<div>
+  <div>
+    <%= link_to "Add a new expense", new_user_group_expense_path(user_id: current_user.id, group_id: @group_id) %>
+  </div> 
+</div> 
