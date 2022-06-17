@@ -8,5 +8,5 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { minimum: 3, maximum: 100 }
 
   has_many :groups, dependent: :destroy
-  has_many :expenditures, dependent: :destroy
+  has_many :expenses, dependent: :destroy
 end
