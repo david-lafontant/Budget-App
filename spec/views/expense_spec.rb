@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Expense', type: :feature do
   describe 'Expense' do
     before(:each) do
-      @user = User.create!(name: 'User Name',password: '123456', email: 'user@email.com',  confirmed_at: Time.now)
+      @user = User.create!(name: 'User Name', password: '123456', email: 'user@email.com', confirmed_at: Time.now)
       @group = Group.create!(name: 'group', user_id: @user.id, icon: 'Education')
       Expense.create!(name: 'Expense', user_id: @user.id, amount: 20, group_id: @group.id)
       Expense.create!(name: 'new Expense', user_id: @user.id, amount: 20, group_id: @group.id)
