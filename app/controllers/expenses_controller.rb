@@ -1,23 +1,18 @@
 class ExpensesController < ApplicationController
-  # GET /expenses or /expenses.json
   def index
     @group_id = Group.find(params[:group_id])
     @expenses = Expense.where(group_id: @group_id.id).order(created_at: :desc)
   end
 
-  # GET /expenses/1 or /expenses/1.json
   def show; end
 
-  # GET /expenses/new
   def new
     @group_id = Group.find(params[:group_id]).id
     @expense = Expense.new
   end
 
-  # GET /expenses/1/edit
   def edit; end
 
-  # POST /expenses or /expenses.json
   def create
     @expense = Expense.new(expense_params)
     @expense.user_id = current_user.id
