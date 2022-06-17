@@ -1,2 +1,27 @@
-<h1>Groups#index</h1>
-<p>Find me in app/views/groups/index.html.erb</p>
+
+<div>
+  <h2>CATEGORIES</h2>
+  <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+</div>
+
+<div>
+  <% if @groups %>
+    <% @groups.each do |group| %>
+    <a href = "/users/<%= group.user_id %>/groups/<%= group.id %>/expenses">
+    <div>
+      <div> 
+       <%= image_tag "#{group.icon}.png", style: 'height:40px; width:auto;' %>  <%= group.name%>
+      </div>
+        <div><%= group.user_name(group.user_id) %> </div>
+
+      <div> Total: $<%= group.total_spent(group.id)%></div>
+    </div>
+    </a>
+    <% end %>
+  <% end %>
+</div>
+<div>
+  <div>
+    <%= link_to 'ADD A NEW CATEGORY', new_user_group_path(current_user), class:  'add-ne-category-btn text-gray-4' %>
+  <div>
+<div>
