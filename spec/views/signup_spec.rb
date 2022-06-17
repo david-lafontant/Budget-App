@@ -13,7 +13,7 @@ RSpec.describe 'User index page', type: :feature do
       fill_in 'Confirm Password', with: '123456'
       click_button 'Next'
 
-      expect(page).to have_content('A message with a confirmation link has been sent to your email address. Please follow the link to activate your account.')
+      expect(page).to have_content('Welcome! You have signed up successfully')
     end
 
     scenario ' I can not sign up without user name user details' do
