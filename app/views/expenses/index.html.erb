@@ -69,8 +69,8 @@
 
 
 
-  <div>
-    <%= link_to "Add a new expense", new_user_group_expense_path(user_id: current_user.id, group_id: @group_id), :class => "inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %>
+  <div class="w-full absolute bottom-0 left-0 bg-fond_vert h-12 p-3 mb-1 flex items-center text-center">
+    <%= link_to "Add a new expense", new_user_group_expense_path(user_id: current_user.id, group_id: @group_id), :class => "inline-block w-full border border-10 text-xl border-white px-6 py-2.5 bg-fond_vert text-stone-300 font-medium text-xs leading-tight uppercase shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %>
   </div> 
 
 
