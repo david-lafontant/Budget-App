@@ -17,7 +17,7 @@ RSpec.describe 'Expense', type: :feature do
     scenario 'I can see an expense I added' do
       click_link 'group'
       expect(page).to have_content('Expense')
-      expect(page).to have_content('20')
+      expect(page).to have_content('40')
     end
 
     scenario 'I can see a total expense amount' do
