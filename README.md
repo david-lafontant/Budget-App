@@ -2,9 +2,10 @@
 
 **Budget App** App is an application that helps your expenses and stay on budget!.
 
-![image]()
 
-
+|   |   |   |
+|---|---|---|
+|  ![image](screen-01.png) | ![image](screen-04.png)  |  ![image](screen-05.png) |   
 
 # This project was built with
 
@@ -19,6 +20,10 @@
 [Live Demo link]()
 
 
+## Loom video
+[Loom video link](https://www.loom.com/share/2a189b1491a64e82a1b6f24794468c96)
+
+
 # Getting Started
 
 To get a local copy up and running follow these simple steps.
@@ -28,7 +33,7 @@ To get a local copy up and running follow these simple steps.
 - Type `cd Budget-app` to access the project on the terminal.
   
 - Run `bundle install` to install all the required dependancies.
-
+- - Run `rails db:reset` to drop, create and migrate a new database.
 - Run `rails s` to start a development server.
 
 # Testing
