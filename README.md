@@ -17,7 +17,7 @@
 
 ## Live Demo
 
-[Live Demo link](https://blooming-temple-54098.herokuapp.com/)
+[Live Demo link](https://my-rails-budget-app-0479a13abf21.herokuapp.com/)
 
 
 ## Loom video
