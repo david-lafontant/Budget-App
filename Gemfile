@@ -61,8 +61,9 @@ group :development do
   # gem "rack-mini-profiler"
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
   gem 'letter_opener'
+  gem 'rubocop', '>= 1.0', '< 2.0'
+  gem 'spring'
 end
 
 group :test do
@@ -74,4 +75,3 @@ end
 
 gem 'cancancan'
 gem 'devise'
-gem 'rubocop'
